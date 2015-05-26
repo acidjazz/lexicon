@@ -1,0 +1,77 @@
+
+vendor-prefixes ?= webkit moz o ms official
+
+@import vendor
+@import guide
+@import mixins
+
+body
+  margin 0
+  padding 0
+  background-color c_text
+  color black
+  font-size 20px
+  font-family montserrat-light
+  background-color #dcdcdc
+
+.clear
+  clearfix()
+
+.header
+  padding 1em
+  text-align center
+  background-color c_primary
+  color c_text
+  border-top 1em solid c_primaryDark
+  margin auto
+  box-shadow 0 2px 6px rgba(0,0,0,0.2)
+  > .hlcopy
+    color c_text
+    font-size 2em
+  > .hrcopy
+    color c_primaryLight
+    font-size 1em
+
+.main
+  max-width 1200px
+  height 635px
+  margin auto
+  background-color c_text
+  padding 1em 2em
+
+.lcopy
+  font-size 1.5em
+  color c_primaryText
+
+.rcopy
+  font-size 1em
+  color c_secondaryText
+
+.button
+  cursor pointer
+  color c_text
+  background-color c_accent
+  box-shadow 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)
+  border-radius 2px
+  padding 0.5em 1em 0.5em 1em
+  text-transform uppercase
+  transition box-shadow 0.3s ease-out
+  &:hover
+    box-shadow 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15)
+  
+  &.test
+    display inline-block
+    margin 1em 2em 0 0
+
+.footer
+  padding 2em
+  background-color c_text
+  > .company
+    float right
+    width 60px
+    height 60px
+    border 1px solid red
+    > svg > g > g > path
+      fill c_primaryText
+
+@import fonts
