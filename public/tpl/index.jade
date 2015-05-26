@@ -10,8 +10,14 @@ block content
     .rcopy test copy one two three
 
     .button.test test button
+    .button.test another
 
   .footer
     .company
       include ../svg/256.svg
     .clear
+
+  script(type='text/javascript').
+    function loadercomplete() {
+      Loader.load('./jst/index.js', 'Index');
+    }
