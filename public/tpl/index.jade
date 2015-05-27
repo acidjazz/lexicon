@@ -1,9 +1,7 @@
 extends inc/layout
 
 block content
-  .header
-    .hlcopy kevin scott olson
-    .hrcopy kevin scott olson junior
+  include inc/header
   .main
 
     .lcopy test copy one two
@@ -19,5 +17,5 @@ block content
 
   script(type='text/javascript').
     function loadercomplete() {
-      Loader.load('./jst/index.js', 'Index');
+      Loader.load('/jst/index.js', 'Index');
     }

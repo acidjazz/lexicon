@@ -8,5 +8,9 @@ Class Admin {
 
   }
 
+  public function index() {
+    \tryg\Jade::c('admin');
+  }
+
 
 }
