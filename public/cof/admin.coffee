@@ -13,3 +13,7 @@ Admin =
       $(this).parent().addClass 'focused'
     $('input, textarea').on 'blur', ->
       $(this).parent().removeClass 'focused'
+
+    $('form.form').on 'submit', ->
+      console.log 'submit detected'
+      return false

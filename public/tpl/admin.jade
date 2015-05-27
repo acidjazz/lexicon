@@ -9,15 +9,17 @@ block content
 
       .input
         .label Project
-        input(name='project',type='text')
+        input(name='project',type='text',tabindex=1)
       .input
         .label Agency
-        input(name='agency',type='text')
+        input(name='agency',type='text',tabindex=2)
       .input
         .label Description
-        textarea(name='description', type='text')
+        textarea(name='description', type='text',tabindex=3)
 
-      .button.right add content
+      .buttons
+        button.button.right(type='submit',tabindex=4) add
+        button.button.right(type='reset',tabindex=5) reset
 
   script(type='text/javascript').
     function loadercomplete() {

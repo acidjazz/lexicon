@@ -10,8 +10,12 @@ Admin = {
     $('input, textarea').on('focus', function() {
       return $(this).parent().addClass('focused');
     });
-    return $('input, textarea').on('blur', function() {
+    $('input, textarea').on('blur', function() {
       return $(this).parent().removeClass('focused');
+    });
+    return $('form.form').on('submit', function() {
+      console.log('submit detected');
+      return false;
     });
   }
 };
