@@ -1,0 +1,25 @@
+extends inc/layout
+
+block content
+  include inc/header
+
+  .main
+
+    form.form
+
+      .input
+        .label Project
+        input(name='project',type='text')
+      .input
+        .label Agency
+        input(name='agency',type='text')
+      .input
+        .label Description
+        textarea(name='description', type='text')
+
+      .button.right add content
+
+  script(type='text/javascript').
+    function loadercomplete() {
+      Loader.load('/jst/admin.js', 'Admin');
+    }
