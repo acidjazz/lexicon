@@ -5,6 +5,7 @@ vendor-prefixes ?= webkit moz o ms official
 @import guide
 @import mixins
 
+
 body
   margin 0
   padding 0
@@ -13,6 +14,10 @@ body
   font-size 20px
   font-family montserrat-light
   background-color #dcdcdc
+
+::selection
+  color c_text
+  background-color c_accent
 
 .clear
   clearfix()
@@ -46,9 +51,12 @@ body
   font-size 1em
   color c_secondaryText
 
+form.form
+  width 700px
+  margin auto
+
 .input
   padding 0.5em 1em
-  width 400px
   &.focused > .label
     color c_accent
   > .label
@@ -69,6 +77,7 @@ body
     text-shadow 0 0 0 c_primaryText
     color c_accent
     width 100%
+    resize none
     &:focus
       border-bottom 0.1em solid c_accent
 
@@ -92,6 +101,9 @@ textarea::-webkit-input-placeholder
   &.test
     display inline-block
     margin 1em 2em 0 0
+  &.right
+    float right
+    margin 2em 1em
 
 .footer
   padding 2em
@@ -100,7 +112,6 @@ textarea::-webkit-input-placeholder
     float right
     width 60px
     height 60px
-    border 1px solid red
     > svg > g > g > path
       fill c_primaryText
 
