@@ -4,7 +4,10 @@ Admin = {
   i: function() {
     Waves.attach('.button', ['waves-float', 'waves-light']);
     Waves.init();
-    return Admin.handlers();
+    Admin.handlers();
+    return AWS.config.credentials = new AWS.CognitoIdentityCredentials({
+      IdentityPoolId: IdentityPoolId
+    });
   },
   handlers: function() {
     $('input, textarea').on('focus', function() {

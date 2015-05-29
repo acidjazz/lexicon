@@ -21,7 +21,10 @@
         "debug": "true",
         "handler": "true"
       }
+    },
 
+    "aws": {
+      "identity": "us-east-1:a391dd8e-a21a-4b78-9905-a3959fdb0ae8"
     },
 
     "mongo": {

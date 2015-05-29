@@ -6,6 +6,9 @@ Admin =
     Waves.init()
 
     Admin.handlers()
+    AWS.config.credentials = new AWS.CognitoIdentityCredentials(
+      IdentityPoolId: IdentityPoolId
+    )
 
   handlers: ->
 
