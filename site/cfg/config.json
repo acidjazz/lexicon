@@ -17,6 +17,7 @@
     },
 
     "tryg": {
+      "timezone": "UTC",
       "Debug": {
         "debug": "true",
         "handler": "true"
